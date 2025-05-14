@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3dbotaz</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?famiyl=Poppins:200,300,400,500,600,700,800,900&display=swap");
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins',sans-serif;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #151f28;
+        }
+        .card{
+            position: relative;
+            width: 350px;
+            height: 350px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.5s;
+            border-radius: 20px;
+            transition-delay: 0.5s;
+        }
+        .card:hover{
+            width: 600px;
+            transition-delay: 0.5s;
+        }
+        .card .circle{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .card .circle::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            background: #191919;
+            border: 8px solid var(--clr);
+            filter: drop-shadow(0 0 10px var(--clr)) drop-shadow(0 0 60px var(--clr));
+            transition: 0.5s, background 0.5s;
+            transition-delay: 0.75s, 1s;
+        }
+        .card:hover .circle::before{
+            transition-delay: 0.5s;
+            border-radius: 20px;
+            width: 100%;
+            height: 100%;
+            background: var(--clr);
+        }
+        .card .circle .logo{
+            position: relative;
+            width: 250px;
+            transition: 0.5s;
+            transition-delay: 0.5s;
+
+        }
+        .card:hover .circle .logo{
+            transform: scale(0);
+            transition-delay: 0s;
+        }
+        .card .product_img{
+            position: absolute;
+            top: 45%;
+            left: 75%;
+            transform: translate(-50%, -50%) scale(0) rotate(315deg);
+            height: 500px;
+            transition: 0.5s ease-in-out;
+        }
+        .card:hover .product_img{
+            transition-delay: 0.75s;
+            top: 45%;
+            left: 75%;
+            height: 100px;
+            transform: translate(-50%, -50%) scale(1) rotate(15deg);
+        }
+        .card .content{
+            position: absolute;
+            width: 50%;
+            left: 20%;
+            padding: 20px 20px 20px 40px;
+            opacity: 0;
+            transition: 0.5s;
+            visibility: hidden;
+        }
+        .card:hover .content{
+            transition-delay: 0.75s;
+            opacity: 1;
+            visibility: visible;
+            left: 20px;
+        }
+        .card .content h2{
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 2.5em;
+            line-height: 1em;
+        }
+        .card .content p{
+            color: #fff;
+        }
+        .card .content a {
+            position: relative;
+            color: #111;
+            background: #fff;
+            padding: 10px 20px;
+            border-radius: 10px;
+            display: inline-block;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="circle" style="--clr: #f40103;">
+            <!-- <img src="http://codingstella.com/wp-content/uploads/2024/01/download-15"  class="logo" alt=""></div> -->
+            <!-- <img src="https://picsum.photos id/1043/400/300" alt=""> -->
+        </div>
+        <div class="content">
+             <h2>CocaCola</h2>
+             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                 Ut dolores officia, quibusdam unde,ipsum laudantium consequuntur cumque,
+                  exercitationem ipsa voluptatibus quidem, quas repellat explicabo non.</p>
+              <a href="#">Explorer more</a>
+        </div>
+        <!-- <img src="http://codingstella.com/wp-content/uploads/2024/01/download-15" class="product_img" width="50"> -->
+        <img src="sneakersprazracni.png" class="product_img">
+        
+    </div>
+</body>
+</html>
